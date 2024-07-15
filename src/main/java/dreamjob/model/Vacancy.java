@@ -4,9 +4,17 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Vacancy {
-
     private int id;
     private String title;
+    private String description;
+    private LocalDateTime creationDate;
+
+    public Vacancy(int id, String title, String description, LocalDateTime creationDate) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.creationDate = creationDate;
+    }
 
     public String getDescription() {
         return description;
@@ -21,16 +29,6 @@ public class Vacancy {
     }
 
     public void setCreationDate(LocalDateTime creationDate) {
-        this.creationDate = creationDate;
-    }
-
-    private String description;
-    private LocalDateTime creationDate;
-
-    public Vacancy(int id, String title, String description, LocalDateTime creationDate) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
         this.creationDate = creationDate;
     }
 
