@@ -53,4 +53,14 @@ public class VacancyController {
         }
         return "redirect:/vacancies";
     }
+
+    @GetMapping("/delete/{id}")
+    public String delete(Model model, @PathVariable int id) {
+        var isDeleted = vacancyRepository.deleteById(id);
+        if (!isDeleted) {
+            model.addAttribute("message", "Вакансия с указанным идентификатором не найдена");
+            return "errors/404";
+        }
+        return "redirect:/vacancies";
+    }
 }
