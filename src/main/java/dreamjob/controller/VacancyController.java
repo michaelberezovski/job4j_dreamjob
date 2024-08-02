@@ -7,9 +7,6 @@ import org.springframework.web.bind.annotation.*;
 import dreamjob.repository.MemoryVacancyRepository;
 import dreamjob.repository.VacancyRepository;
 
-import javax.servlet.http.HttpServletRequest;
-import java.time.LocalDateTime;
-
 @Controller
 @RequestMapping("/vacancies")
 public class VacancyController {
